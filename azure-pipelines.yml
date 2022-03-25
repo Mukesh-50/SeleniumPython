@@ -16,7 +16,7 @@ steps:
                  python -m venv env
                  source venv/bin/activate
                  pip install -r ./requirements.txt
-                 pytest .\sample\MyFirstTest.py
+                 pytest ./sample/MyFirstTest.py
   displayName: 'Run a one-line script'
 
 
