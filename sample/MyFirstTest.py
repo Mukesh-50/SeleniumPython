@@ -7,6 +7,6 @@ def test_myLogin():
     driver.get("http://www.google.com")
     print("Page Title is "+driver.title)
     print("Page url is "+driver.current_url)
-    assert driver.title == "Google"
+    assert driver.title == "Mukesh"
     driver.find_element(By.NAME,"q").send_keys("Mukesh Otwani")
     driver.quit()
