@@ -7,14 +7,14 @@ trigger:
 - master
 
 pool:
-  vmImage: windows-latest
+  vmImage: ubuntu-latest
   -task: PythonScript@0
     
 
 steps:
 - script: |
                  python -m venv env
-                 call ./env/Scripts/activate.bat
+                 source venv/bin/activate
                  pip install -r ./requirements.txt
                  pytest .\sample\MyFirstTest.py
   displayName: 'Run a one-line script'
