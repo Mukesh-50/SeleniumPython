@@ -11,16 +11,14 @@ pool:
   -task: PythonScript@0
   inputs:
     scriptSource: 'inline'
-    script: 'python -m venv env'
-    script: 'call ./env/Scripts/activate.bat'
-    script:  'pip install -r ./requirements.txt'
-    script:  'pytest .\sample\MyFirstTest.py'
+    script: |
+                 python -m venv env
+                 call ./env/Scripts/activate.bat
+                 pip install -r ./requirements.txt
+                 pytest .\sample\MyFirstTest.py
 
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+
